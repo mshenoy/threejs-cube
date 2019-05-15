@@ -17,7 +17,11 @@ function init() {
   document.body.appendChild(renderer.domElement);
 
   const geometry = new THREE.BoxGeometry(2, 2, 2);
-  const material = new THREE.MeshBasicMaterial({ color: 0x0000ff });
+
+  // const material = new THREE.MeshBasicMaterial({ color: 0x0000ff });
+  const texture = new THREE.TextureLoader().load('textures/crate.png');
+  const material = new THREE.MeshBasicMaterial({ map: texture });
+
   cube = new THREE.Mesh(geometry, material);
   scene.add(cube);
 
