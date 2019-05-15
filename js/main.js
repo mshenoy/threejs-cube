@@ -2,6 +2,7 @@ let scene, camera, render, cube;
 
 function init() {
   scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x2c3335);
 
   camera = new THREE.PerspectiveCamera(
     75,
